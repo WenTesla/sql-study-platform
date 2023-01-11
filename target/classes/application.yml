@@ -1,0 +1,24 @@
+token: MLRO5D2X3klh4GJBsFJwGLQ0EA2ckUwQHzw3B8Fw+zRuwXx0SJky3q8CEs9ymWd17WfmxF9wePOr2zp7/AM7Gt9wu8kZ62W6B/Rkqf/FHC9GfQ9+Tyeijy24O6taFUcJ2AjCb9kqc91BXc7jAhiGAh3O8dzF1DymvzxJGno7fOY=
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: prod
+  jackson:
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+    deserialization:
+      read_unknown_enum_values_as_null: true
+
+logging:
+  level:
+    'com.example.demo.mapper': debug
+
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      column-format: "`%s`"
+      logic-delete-value: NOW()
+      logic-not-delete-value: 'NULL'
