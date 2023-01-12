@@ -20,6 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collections;
 import java.util.stream.Collectors;
 
+/**
+ * 用于返回表格的数据
+ *
+ */
 @RestController
 @RequestMapping("/chart")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
@@ -29,6 +33,24 @@ public class ChartController {
 
     private final LinkQuestionGroupMapper linkQuestionGroupMapper;
 
+    /**
+     * 统计学生总分
+     * 下面的例子
+     * {
+     * 	"success": true,
+     * 	"code": 200,
+     * 	"data": {
+     * 		"labels": ["单元测试1", "单元测试2", "期末考试"],
+     * 		"datasets": [{
+     * 			"label": "试卷",
+     * 			"data": [5, 2, 1],
+     * 			"backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(255, 206, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(255, 159, 64, 0.2)"],
+     * 			"borderColor": ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)", "rgba(75, 192, 192, 1)", "rgba(153, 102, 255, 1)", "rgba(255, 159, 64, 1)"],
+     * 			"borderWidth": 1
+     *                }]* 	}
+     * }
+     * @return
+     */
     @GetMapping("/question")
     public ChartBean getQuestion() {
 
@@ -61,6 +83,26 @@ public class ChartController {
 
     private final UserMapper userMapper;
 
+    /**
+     * 统计试卷题目数
+     * 下列的例子
+     {
+     "success": true,
+     "code": 200,
+     "data": {
+     "labels": ["1", "松涵梅", "蒋念雁", "睦辰", "test", "666"],
+     "datasets": [{
+     "label": "总分",
+     "data": [20, 41, 64, 39, 32, 15],
+     "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(255, 206, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(255, 159, 64, 0.2)"],
+     "borderColor": ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)", "rgba(75, 192, 192, 1)", "rgba(153, 102, 255, 1)", "rgba(255, 159, 64, 1)"],
+     "borderWidth": 1
+     }]
+     }
+     }
+     *
+     * @return
+     */
     @GetMapping("/sumScore")
     public ChartBean getSumScore() {
 

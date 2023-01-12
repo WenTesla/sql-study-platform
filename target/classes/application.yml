@@ -14,7 +14,7 @@ spring:
 logging:
   level:
     'com.example.demo.mapper': debug
-
+# mybatis-plus配置
 mybatis-plus:
   global-config:
     banner: false

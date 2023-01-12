@@ -1,9 +1,11 @@
+# 生产环境使用
 spring:
   datasource:
     platform: h2
     driver-class-name: org.h2.Driver
     url: jdbc:h2:file:~/sql_study_platform;IFEXISTS=FALSE;MODE=MYSQL;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;
     username: sa
+# 选择数据库初始化类型
     initialization-mode: always
   h2:
     console:

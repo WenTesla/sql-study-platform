@@ -22,6 +22,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.*;
 
+/**
+ * 试卷管理
+ */
 @RestController
 @RequestMapping("question")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))

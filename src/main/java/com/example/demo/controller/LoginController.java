@@ -22,6 +22,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+/**
+ * 登录
+ */
 @RestController
 @RequestMapping("/login")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
